@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <%- include("partials/head"); %>
+  <body>
+    <%- include("partials/navbar"); %>
+    <div class="container">
+      <form method="post" action="/edit/<%= user.id %>?_method=PUT">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nama User</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="name"
+            value="<%= user.name %>"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="placeofbirth" class="form-label">Tempat Lahir</label>
+
+          <input
+            type="text"
+            class="form-control"
+            id="placeofbirth"
+            name="placeofbirth"
+            value="<%= user.placeofbirth%>"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="dateOfBirth" class="form-label">Tanggal Lahir</label>
+          <input
+            type="date"
+            class="form-control"
+            id="dateOfBirth"
+            name="dateOfBirth"
+            value="<%= user.dateofbirth %>"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Alamat</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="address"
+            name="address"
+            min="0"
+            value="<%= user.address %>"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            value="<%= user.email %>"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="phone_number" class="form-label">Nomor Telepon</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone_number"
+            name="phone_number"
+            min="0"
+            value="<%= user.phone_number %>"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <div class="col-auto">
+            <button
+              type="button"
+              onclick="history.back()"
+              class="btn btn-danger"
+            >
+              Batal
+            </button>
+          </div>
+
+          <div class="col-auto">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

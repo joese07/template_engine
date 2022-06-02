@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <%- include("partials/head"); %>
+  <body>
+    <%- include("partials/navbar"); %>
+    <div class="container m-4">
+      <form method="post" action="/user">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nama User</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="dateofbirth" class="form-label">Tempat Lahir</label>
+
+          <input
+            type="text"
+            class="form-control"
+            id="placeofbirth"
+            name="placeofbirth"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="dateofbirth" class="form-label">Tanggal Lahir</label>
+          <input
+            type="date"
+            class="form-control"
+            id="dateofbirth"
+            name="dateofbirth"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Alamat</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="address"
+            name="address"
+            min="0"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="phone_number" class="form-label">Nomor Telepon</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone_number"
+            name="phone_number"
+            min="0"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <div class="col-auto">
+            <button
+              type="button"
+              onclick="history.back()"
+              class="btn btn-danger"
+            >
+              Batal
+            </button>
+          </div>
+
+          <div class="col-auto">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

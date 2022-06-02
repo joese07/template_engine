@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <%- include("partials/head"); %>
+  <body>
+    <%- include("partials/navbar"); %>
+    <div class="container">
+<button type="button" onclick="history.back()" class="btn btn-light">
+  <i class="bi-arrow-left"></i>
+  Kembali
+</button>
+
+<h3 class="my-3"><%= title %></h3>
+
+<div class="table-responsive mt-3">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th scope="row">Nama User</th>
+        <td><%= user.name %></td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td><%= user.email %></td>
+      </tr>
+      <tr>
+        <th scope="row">No Telepon</th>
+        <td><%= user.phone_number %></td>
+      </tr>
+         <tr>
+        <th scope="row">Alamat</th>
+        <td><%= user.address %></td>
+      </tr>
+      <tr>
+        <th scope="row">Tempat Lahir</th>
+        <td><%= user.placeofbirth %></td></td>
+      </tr>
+      <tr>
+        <th scope="row">Tanggal Lahir</th>
+        <td><%= user.dateofbirth %></td>
+      </tr>
+      <tr>
+        <th scope="row">Data Dibuat</th>
+        <td><%= user.createdAt %></td>
+      </tr>
+      <tr>
+        <th scope="row">Data Diperbarui</th>
+        <td><%= user.updatedAt %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    </div>
+  </body>
+</html>
